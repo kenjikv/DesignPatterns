@@ -1,1 +1,1 @@
-# Curso-de-Patrones-de-dise-o
+# Curso de Patrones de diseño
