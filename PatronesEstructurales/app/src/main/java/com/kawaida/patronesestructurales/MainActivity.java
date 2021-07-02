@@ -12,6 +12,9 @@ import com.kawaida.patronesestructurales.bridge.AdvancedRemote;
 import com.kawaida.patronesestructurales.bridge.BasicRemote;
 import com.kawaida.patronesestructurales.bridge.Radio;
 import com.kawaida.patronesestructurales.bridge.Tv;
+import com.kawaida.patronesestructurales.proxy.ServiceMessage;
+import com.kawaida.patronesestructurales.proxy.ServiceMessageImpl;
+import com.kawaida.patronesestructurales.proxy.ServiceMessageImpl2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,5 +61,13 @@ public class MainActivity extends AppCompatActivity {
         advancedRemote.power();
         advancedRemote.mute();
         radio.printStatus();
+
+
+        //Proxy
+        ServiceMessage sm = new ServiceMessageImpl();
+        System.out.println(sm.message("Kenji"));
+
+        sm = new ServiceMessageImpl2();
+        System.out.println(sm.message("Kenji"));
     }
 }
